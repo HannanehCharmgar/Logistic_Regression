@@ -195,19 +195,19 @@ $\[
 \]$
 
 ### 2️⃣ Precision (دقت پیش‌بینی‌های مثبت)
-\[
+$\[
 \text{Precision} = \frac{TP}{TP + FP}
-\]
+\]$
 
 ### 3️⃣ Recall / Sensitivity (توانایی یافتن بیماران واقعی)
-\[
+$\[
 \text{Recall} = \frac{TP}{TP + FN}
-\]
+\]$
 
 ### 4️⃣ F1-Score (تعادل Precision و Recall)
-\[
+$\[
 F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
-\]
+\]$
 
 
 
