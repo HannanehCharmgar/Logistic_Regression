@@ -187,6 +187,29 @@ Loss = -[y log(p) + (1-y) log(1-p)]
 - Recall: توانایی یافتن بیماران واقعی
 - F1-score: تعادل Precision و Recall
 
+  
+
+### 1️⃣ Accuracy (دقت کلی)
+\[
+\text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
+\]
+
+### 2️⃣ Precision (دقت پیش‌بینی‌های مثبت)
+\[
+\text{Precision} = \frac{TP}{TP + FP}
+\]
+
+### 3️⃣ Recall / Sensitivity (توانایی یافتن بیماران واقعی)
+\[
+\text{Recall} = \frac{TP}{TP + FN}
+\]
+
+### 4️⃣ F1-Score (تعادل Precision و Recall)
+\[
+F1 = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
+\]
+
+
 
 
 در پزشکی، FN خطرناک‌ترین خطاست.
