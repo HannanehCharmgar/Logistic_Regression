@@ -179,14 +179,8 @@ Loss = -[y log(p) + (1-y) log(1-p)]
 
 <img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/e61c2513-0ee3-46d8-a70a-6a46c9e5800b" />
 
+طبق این ماتریس میتوانیم عملکرد مدل را ارزیابی کنیم:
 
-
-
-در پزشکی، FN خطرناک‌ترین خطاست.
-
----
-
-## مرحله ۱۱: معیارهای ارزیابی
 
 - Accuracy: دقت کلی
 - Precision: دقت پیش‌بینی‌های مثبت
@@ -194,6 +188,8 @@ Loss = -[y log(p) + (1-y) log(1-p)]
 - F1-score: تعادل Precision و Recall
 
 
+
+در پزشکی، FN خطرناک‌ترین خطاست.
 
 ---
 
