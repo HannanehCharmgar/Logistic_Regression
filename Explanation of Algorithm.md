@@ -190,9 +190,9 @@ Loss = -[y log(p) + (1-y) log(1-p)]
   
 
 ### 1️⃣ Accuracy (دقت کلی)
-\[
+$\[
 \text{Accuracy} = \frac{TP + TN}{TP + TN + FP + FN}
-\]
+\]$
 
 ### 2️⃣ Precision (دقت پیش‌بینی‌های مثبت)
 \[
