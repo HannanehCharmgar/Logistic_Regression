@@ -120,12 +120,14 @@ ax2.set_ylabel('Value', fontsize=12)
 ax2.set_ylim(0, 1)
 
 # Add value labels on bars
+
 for bar, value in zip(bars, values):
     height = bar.get_height()
     ax2.text(bar.get_x() + bar.get_width()/2., height + 0.02,
              f'{value:.3f}', ha='center', va='bottom', fontsize=11)
 
 # 3. ROC Curve
+
 ax3 = axes[1, 0]
 fpr, tpr, thresholds = roc_curve(y_test, y_pred_proba)
 roc_auc = roc_auc_score(y_test, y_pred_proba)
@@ -157,11 +159,13 @@ plt.show()
 
 
 #  Model Interpretation
+
 print("\n" + "="*50)
 print(" Model Interpretation")
 print("="*50)
 
 # Model coefficients
+
 coefficients = pd.DataFrame({
     'Feature': X.columns,
     'Coefficient': model.coef_[0],
@@ -172,6 +176,7 @@ print("\n Feature Importance (by absolute coefficient values):")
 print(coefficients.drop('Abs_Coefficient', axis=1).to_string(index=False))
 
 # Coefficient plot
+
 plt.figure(figsize=(10, 6))
 colors = ['red' if coef < 0 else 'green' for coef in coefficients['Coefficient']]
 plt.barh(coefficients['Feature'], coefficients['Coefficient'], color=colors)
