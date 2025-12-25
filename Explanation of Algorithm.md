@@ -120,14 +120,16 @@ $$
 ## 🔹 7. تفسیر ضرایب: Odds و Log-Odds
 
 ### تعاریف:
-- **Odds** (شانس):  
-  $$
-  \text{Odds} = \frac{P(y=1)}{P(y=0)} = \frac{p}{1-p}
-  $$
+- **Odds** (شانس):
+  
+ <img width="192" height="50" alt="image" src="https://github.com/user-attachments/assets/783ed466-b5d2-4f9a-b7b5-238514e54e39" />
+
+
 - **Log-Odds** (یا Logit):  
-  $$
-  \log\left( \frac{p}{1-p} \right) = \mathbf{w}^T \mathbf{x}
-  $$
+
+ <img width="269" height="42" alt="image" src="https://github.com/user-attachments/assets/66f94025-7eb8-4ff3-8f74-af433039c711" />
+ 
+
 
 پس مدل **مستقیماً روی log-odds خطی است**.
 
