@@ -57,27 +57,20 @@ $$
 
 برای یک نمونه $\mathbf{x} = [1, x_1, x_2, ..., x_n]$:
 
-1. **ترکیب خطی**:  
-   $$
-   z = w_0 + w_1x_1 + w_2x_2 + \dots + w_nx_n = \mathbf{w}^T \mathbf{x}
-   $$
+**ترکیب خطی**:  
+  <img width="257" height="33" alt="image" src="https://github.com/user-attachments/assets/ffccc9d2-7dba-4b7d-8fe8-e8fd134decc3" />
 
-2. **تبدیل به احتمال**:  
-   $$
-   \hat{p} = P(y=1 \mid \mathbf{x}) = \sigma(z) = \frac{1}{1 + e^{-z}}
-   $$
 
-3. **تصمیم‌گیری نهایی** (در inference):  
-   $$
-   \hat{y} = 
-   \begin{cases}
-   1 & \text{if } \hat{p} \geq \tau \\
-   0 & \text{if } \hat{p} < \tau
-   \end{cases}
-   $$
-   - $\tau$: آستانه (threshold)، معمولاً $\tau = 0.5$ (اما قابل تنظیم است).
+**تبدیل به احتمال(اعمال سیگموئید)**:
+<img width="254" height="40" alt="image" src="https://github.com/user-attachments/assets/db131b9c-79db-41ff-90db-0fe61c358c92" />
 
----
+
+  
+**تصمیم‌گیری نهایی** (در inference):  
+  <img width="151" height="57" alt="image" src="https://github.com/user-attachments/assets/67a97fdd-3946-4d40-a631-0a42ca0bee92" />
+آستانه 0.5 قابل تنظیم است(مثلا در موضوعات حساس پزشکی به 0.3 یا 0.7 تغییر می کند.)
+  
+  ---
 
 ## 🔹 5. تابع هزینه: Log Loss (Cross-Entropy)
 
