@@ -81,10 +81,8 @@ z = w1x1 + w2x2 + ... + wnxn + b
 
 این تابع هر عددی را به بازه [0, 1] نگاشت می‌کند.
 
-[
-![Sigmoid Function](https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg)](https://media.licdn.com/dms/image/v2/D4D12AQGIXdSG7IJCNw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1694183259537?e=2147483647&t=lJ_qEzot0iGYhNpez9XGRNHjS-CDKHn3Wj-6iCQxRO0&v=beta)
+<img width="485" height="323" alt="1694183259537" src="https://github.com/user-attachments/assets/c79c04c5-3662-4ddb-b0b5-7b0bfa5cf3f3" />
 
-تفسیر:
 - z = خیلی منفی → خروجی نزدیک 0
 - z = 0 → خروجی 0.5
 - z = خیلی مثبت → خروجی نزدیک 1
