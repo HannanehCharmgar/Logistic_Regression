@@ -199,7 +199,6 @@ Loss = -[y log(p) + (1-y) log(1-p)]
 - F1-score: تعادل Precision و Recall
 
 
-)
 
 ---
 
