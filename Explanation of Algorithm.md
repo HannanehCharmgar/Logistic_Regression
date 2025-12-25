@@ -137,7 +137,7 @@ Loss = -[y log(p) + (1-y) log(1-p)]
 - پیش‌بینی اشتباه با اطمینان بالا → جریمه سنگین
 - پیش‌بینی درست → جریمه کم
 
-<img width="800" height="550" alt="image" src="https://github.com/user-attachments/assets/328cf481-6a81-4b18-8272-cfb9e0ae042a" />
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/328cf481-6a81-4b18-8272-cfb9e0ae042a" />
 
 
 این نمودار نشان می‌دهد که:
@@ -182,7 +182,8 @@ Loss = -[y log(p) + (1-y) log(1-p)]
 | FN | بیمار → سالم |
 
 
-<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/1baf828c-2cec-4a50-b354-42a4f5e961c6" />
+<img width="700" height="350" alt="image" src="https://github.com/user-attachments/assets/e61c2513-0ee3-46d8-a70a-6a46c9e5800b" />
+
 
 
 
