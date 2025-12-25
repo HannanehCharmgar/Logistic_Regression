@@ -43,21 +43,20 @@
 - Age
 - BloodPressure
 
-هر سطر داده نشان‌دهنده یک فرد  
-و هر ستون یک Feature است.
+هر سطر داده نشان‌دهنده یک فرد و هر ستون یک Feature است.
 
 ---
 
 ## مرحله ۳: ترکیب خطی Featureها (Linear Combination)
 
-در ابتدا، رگرسیون لجستیک مانند رگرسیون خطی عمل می‌کند:
+در ابتدا، رگرسیون لجستیک مانند رگرسیون خطی عمل می‌کندم:
 
 z = w1x1 + w2x2 + ... + wnxn + b
 
 که در آن:
-- x ها Featureها
-- w ها وزن یا اهمیت Featureها
-- b بایاس مدل است
+- متغیر x = ویژگی ها ( features ) 
+- متغیر w = اهمیت feature ها ( وزن ها) 
+- متغیرb = بایاس مدل است.
 
 خروجی این مرحله می‌تواند هر عددی باشد (منفی یا مثبت).
 
@@ -69,8 +68,7 @@ z = w1x1 + w2x2 + ... + wnxn + b
 - z = 6.4
 - z = -3.2
 
-قابل تفسیر به عنوان «احتمال» نیستند.  
-ما نیاز داریم خروجی مدل به عددی بین 0 و 1 تبدیل شود.
+ما با عدد 6.4 نمیتوانیم متوجه شیم فرد دیابت دارد یا خیر و قابل تفسیر به عنوان «احتمال» نیستند چون ما نیاز داریم خروجی مدل به عددی بین 0 و 1 تبدیل شود.
 
 ---
 
@@ -83,13 +81,13 @@ z = w1x1 + w2x2 + ... + wnxn + b
 
 این تابع هر عددی را به بازه [0, 1] نگاشت می‌کند.
 
-تصویر پیشنهادی:
-![Sigmoid Function](https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg)
+[
+![Sigmoid Function](https://upload.wikimedia.org/wikipedia/commons/8/88/Logistic-curve.svg)](https://media.licdn.com/dms/image/v2/D4D12AQGIXdSG7IJCNw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1694183259537?e=2147483647&t=lJ_qEzot0iGYhNpez9XGRNHjS-CDKHn3Wj-6iCQxRO0&v=beta)
 
 تفسیر:
-- z خیلی منفی → خروجی نزدیک 0
+- z = خیلی منفی → خروجی نزدیک 0
 - z = 0 → خروجی 0.5
-- z خیلی مثبت → خروجی نزدیک 1
+- z = خیلی مثبت → خروجی نزدیک 1
 
 ---
 
