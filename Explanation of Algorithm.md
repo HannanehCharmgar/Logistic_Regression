@@ -120,7 +120,7 @@ P(y=1) = 0.78
 آستانه 0.5 رایج است، اما قابل تغییر است.
 
 
-<img width="1219" height="534" alt="image" src="https://github.com/user-attachments/assets/f2cf8cce-456f-45ae-80d6-2130f4043fd6" />
+<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/f2cf8cce-456f-45ae-80d6-2130f4043fd6" />
 
 
 در پزشکی معمولاً آستانه پایین‌تر انتخاب می‌شود تا بیماران بیشتری شناسایی شوند.
