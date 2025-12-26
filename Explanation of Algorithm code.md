@@ -101,6 +101,17 @@ output:
 Number of outliers: 80
 Number of rows after removing outliers: 688
 ```
+## بررسی میزان همبستگی متغیر ها با یکدیگر
+ همبستگی متغیرها یعنی این‌ که چقدر و به چه شکلی دو یا چند متغیر با هم مرتبط هستند. «آیا تغییر یک متغیر با تغییر متغیر دیگر همراه است یا نه؟» 
+```
+corr_matrix = df.corr() 
+sns.heatmap(corr_matrix, annot=True, cmap="coolwarm")
+plt.show()
+```
+output:
+
+<img width="653" height="564" alt="image" src="https://github.com/user-attachments/assets/10d799b6-5a52-483d-8e33-43dbb49f223c" />
+
 
 ## پاکسازی داده
 در این سلول پیش‌پردازش اولیه داده‌ها انجام می‌شود.  
