@@ -52,6 +52,36 @@ print(f"Data size: {df.shape}")
 print(f"\nClass distribution:\n{df['Outcome'].value_counts()}")
 print(f"\nPositive class percentage: {(df['Outcome'].mean()*100):.1f}%")
 ```
+## بررسی و حذف داده های پرت
+داده های پرت(outliers)، داده‌هایی هستند که از الگوی کلی داده‌ها فاصله زیادی دارند. در اینجا با روش z-score آنها را تشخیص و در نهایت حذف میکنیم.
+فرمول z-score:
+$Z = (X - μ) / σ$
+
+X : مقدار هر داده‌ی مورد نظر
+
+
+μ : میانگین (Mean) داده‌ها
+
+
+σ : انحراف معیار (Standard Deviation) داده‌ها
+
+Z : تعداد انحراف معیارهایی که مقدار x از میانگین فاصله دارند.
+
+​
+```
+numeric_cols = df.select_dtypes(include=[np.number]).columns
+z_scores = np.abs(stats.zscore(df[numeric_cols]))
+threshold = 3
+
+# Find rows with outliers
+outlier_rows = np.where(z_scores > threshold)[0]
+print(f"Number of outliers: {len(np.unique(outlier_rows))}")
+
+# Remove outliers
+df_clean = df.drop(index=np.unique(outlier_rows))
+print(f"Number of rows after removing outliers: {len(df_clean)}")
+```
+
 ## پاکسازی داده
 در این سلول پیش‌پردازش اولیه داده‌ها انجام می‌شود.  
 برخی ویژگی‌های پزشکی دارای مقدار صفر هستند که از نظر علمی معتبر نیستند.  
