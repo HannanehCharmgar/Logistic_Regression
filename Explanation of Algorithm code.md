@@ -52,7 +52,7 @@ print(f"Data size: {df.shape}")
 print(f"\nClass distribution:\n{df['Outcome'].value_counts()}")
 print(f"\nPositive class percentage: {(df['Outcome'].mean()*100):.1f}%")
 ```
-output:
+## output:
 ```
  Data Information:
 Data size: (768, 9)
@@ -96,7 +96,7 @@ print(f"Number of outliers: {len(np.unique(outlier_rows))}")
 df_clean = df.drop(index=np.unique(outlier_rows))
 print(f"Number of rows after removing outliers: {len(df_clean)}")
 ```
-output:
+## output:
 ```
 Number of outliers: 80
 Number of rows after removing outliers: 688
@@ -108,7 +108,7 @@ corr_matrix = df.corr()
 sns.heatmap(corr_matrix, annot=True, cmap="coolwarm")
 plt.show()
 ```
-output:
+## output:
 
 <img width="653" height="564" alt="image" src="https://github.com/user-attachments/assets/10d799b6-5a52-483d-8e33-43dbb49f223c" />
 
@@ -195,6 +195,33 @@ print(f"\n Additional Metrics:")
 print(f"Specificity: {specificity:.3f}")
 print(f"NPV: {npv:.3f}")
 ```
+## output:
+
+```
+ Main Metrics:
+ Accuracy: 0.727
+ Precision: 0.594
+ Recall: 0.704
+ F1-Score: 0.644
+
+ Complete Classification Report:
+              precision    recall  f1-score   support
+
+ No Diabetes      0.822     0.740     0.779       100
+Has Diabetes      0.594     0.704     0.644        54
+
+    accuracy                          0.727       154
+   macro avg      0.708     0.722     0.712       154
+weighted avg      0.742     0.727     0.732       154
+
+
+ Confusion Matrix Details:
+TP: 38, TN: 74, FP: 26, FN: 16
+
+ Additional Metrics:
+Specificity: 0.740
+NPV: 0.822
+```
 ## مصورسازی نتایج و ارزیابی ها
 در این سلول نتایج مدل به صورت بصری نمایش داده می‌شوند.  
 نمودارها شامل ماتریس درهم‌ریختگی، مقایسه معیارها، منحنی ROC و Precision-Recall هستند.  
@@ -243,6 +270,11 @@ axes[1,1].legend()
 plt.tight_layout()
 plt.show()
 ```
+## output:
+
+<img width="1189" height="989" alt="image" src="https://github.com/user-attachments/assets/572141a2-06a1-4c7c-b791-f26507907d86" />
+
+
 ## تحلیل مدل
 در این بخش مدل از نظر تأثیر ویژگی‌ها تفسیر می‌شود.  
 ضرایب Logistic Regression نشان می‌دهند هر ویژگی چگونه بر ریسک دیابت اثر می‌گذارد.  
@@ -267,6 +299,10 @@ plt.grid(axis='x', alpha=0.3)
 plt.tight_layout()
 plt.show()
 ```
+## output:
+<img width="990" height="590" alt="image" src="https://github.com/user-attachments/assets/341a1ae1-de35-4f5d-bf3d-d813bc5758bc" />
+
+
 ## تحلیل آستانه تصمیم گیری ( threshold)
 در این سلول تأثیر تغییر آستانه تصمیم‌گیری بررسی می‌شود.  
 با تغییر threshold می‌توان تعادل بین Precision و Recall را کنترل کرد.  
@@ -281,6 +317,17 @@ for thresh in thresholds:
     r = recall_score(y_test, y_pred_thresh)
     f = f1_score(y_test, y_pred_thresh)
     print(f"{thresh:.1f}       | {p:.3f}     | {r:.3f}  | {f:.3f}")
+```
+## output:
+
+```
+Threshold | Precision | Recall | F1-Score
+----------------------------------------
+0.3       | 0.552     | 0.889  | 0.681
+0.4       | 0.568     | 0.852  | 0.681
+0.5       | 0.594     | 0.704  | 0.644
+0.6       | 0.604     | 0.593  | 0.598
+0.7       | 0.634     | 0.481  | 0.547
 ```
 ## تحلیل نهایی
 در این بخش یک جمع‌بندی تحلیلی از عملکرد مدل ارائه می‌شود.  
@@ -306,6 +353,16 @@ if recall < precision:
 else:
     print("  • Increase threshold to reduce false alarms")
 ```
+## output:
+
+```
+Model Strengths and Weaknesses:
+  • High Recall (0.704)
+  • 26 False Positives
+
+ Recommendation:
+  • Increase threshold to reduce false alarms
+```
 ## جدول عملکرد نهایی مدل
 در این بخش تمام معیارهای نهایی مدل در قالب یک جدول خلاصه می‌شوند.  
 این جدول یک نمای کلی و سریع از عملکرد مدل ارائه می‌دهد  
@@ -326,4 +383,16 @@ summary_df = pd.DataFrame({
     ]
 })
 print(summary_df.to_string(index=False))
+```
+## output:
+
+```
+Metric    Value                  Interpretation
+   Accuracy 0.727273             Overall correctness
+  Precision 0.593750    Correct positive predictions
+     Recall 0.703704   Ability to find all positives
+   F1-Score 0.644068 Balance of Precision and Recall
+Specificity 0.740000   Ability to identify negatives
+        NPV 0.822222    Correct negative predictions
+    ROC-AUC 0.815000  Overall classification ability
 ```
