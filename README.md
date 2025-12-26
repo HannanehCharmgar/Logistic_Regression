@@ -1,7 +1,7 @@
 # محتویات فایل ها
 
-- `Code & Output.ipynb`  
-[کد و خروجی الگوریتم](https://github.com/HannanehCharmgar/Logistic_Regression/blob/main/Code%26Output.ipynb)
+- `SRC`  
+[کد اصلی و خروجی الگوریتم](https://github.com/HannanehCharmgar/Logistic_Regression/tree/main/SRC)
 
 - `Explanation of Algorithm code.md`  
 [توضیح بخش بخش کد](https://github.com/HannanehCharmgar/Logistic_Regression/blob/main/Explanation%20of%20Algorithm%20code.md)
@@ -10,7 +10,3 @@
 
 - `diabetes.csv`  
 [فایل دیتا پروژه](https://github.com/HannanehCharmgar/Logistic_Regression/blob/main/diabetes.csv)
-
-- `src.py`  
-[نسخه پایتون پروژه](https://github.com/HannanehCharmgar/Logistic_Regression/blob/main/src.py)
-
