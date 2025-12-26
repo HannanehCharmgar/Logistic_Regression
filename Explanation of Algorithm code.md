@@ -52,9 +52,24 @@ print(f"Data size: {df.shape}")
 print(f"\nClass distribution:\n{df['Outcome'].value_counts()}")
 print(f"\nPositive class percentage: {(df['Outcome'].mean()*100):.1f}%")
 ```
+output:
+```
+ Data Information:
+Data size: (768, 9)
+
+Class distribution:
+Outcome
+0    500
+1    268
+Name: count, dtype: int64
+
+Positive class percentage: 34.9%
+```
 ## بررسی و حذف داده های پرت
 داده های پرت(outliers)، داده‌هایی هستند که از الگوی کلی داده‌ها فاصله زیادی دارند. در اینجا با روش z-score آنها را تشخیص و در نهایت حذف میکنیم.
 فرمول z-score:
+
+
 $Z = (X - μ) / σ$
 
 X : مقدار هر داده‌ی مورد نظر
@@ -80,6 +95,11 @@ print(f"Number of outliers: {len(np.unique(outlier_rows))}")
 # Remove outliers
 df_clean = df.drop(index=np.unique(outlier_rows))
 print(f"Number of rows after removing outliers: {len(df_clean)}")
+```
+output:
+```
+Number of outliers: 80
+Number of rows after removing outliers: 688
 ```
 
 ## پاکسازی داده
